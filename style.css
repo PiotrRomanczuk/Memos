@@ -1,0 +1,14 @@
+body {
+  background-color: gray;
+  min-height: 100vh;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 1200px;
+  border: 1px solid magenta;
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */
