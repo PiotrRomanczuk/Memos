@@ -61,6 +61,13 @@ const cardGenerator = () => {
 		card.appendChild(face);
 		card.appendChild(back);
 		section.appendChild(card);
+
+		//Adde event Listener
+
+		card.addEventListener('click', () => {
+			card.classList.toggle('toggleCard');
+			console.log(card);
+		});
 	});
 
 	console.log(cardData);
