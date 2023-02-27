@@ -40,10 +40,9 @@ section {
 
 .back {
   background-color: white;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .toggleCard {
   transform: rotateY(180deg);
-}/*# sourceMappingURL=style.css.map */
+}

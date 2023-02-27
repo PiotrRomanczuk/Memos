@@ -56,6 +56,7 @@ const cardGenerator = () => {
 		// Attach the info of the cards
 
 		face.src = item.imgSrc;
+		card.setAttribute('name', item.name);
 
 		// Attach the cards to the section
 		card.appendChild(face);
@@ -64,13 +65,36 @@ const cardGenerator = () => {
 
 		//Adde event Listener
 
-		card.addEventListener('click', () => {
+		card.addEventListener('click', (e) => {
 			card.classList.toggle('toggleCard');
-			console.log(card);
+			// console.log(card);
+			checkCards(e);
 		});
 	});
 
 	console.log(cardData);
+};
+
+// Check cards
+
+const checkCards = (e) => {
+	// console.log(e);
+	const clickedCard = e.target;
+	clickedCard.classList.add('flipped');
+	const flippedCards = document.querySelectorAll('.flipped');
+
+	// Logic
+
+	if (flippedCards.length === 2) {
+		if (
+			flippedCards[0].getAttribute('name') ===
+			flippedCards[1].getAttribute('name')
+		) {
+			console.log('match');
+		} else {
+			console.log('wrong');
+		}
+	}
 };
 
 cardGenerator();
